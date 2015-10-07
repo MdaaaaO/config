@@ -4,12 +4,7 @@ import java.util.ArrayList;
 
 public class BubbleSort {
   
-  public void sort(ArrayList<Integer> list_1) {
-    System.out.print("before: ");
-    for (int i = 0; i < list_1.size(); i++) {
-      System.out.print(list_1.get(i) + " ");
-    }
-
+  public ArrayList<Integer> sort(ArrayList<Integer> list_1) {
     int size = list_1.size();
     for (int i = 0; i < size - 1; i++) {
       int iterater = 0;
@@ -25,12 +20,6 @@ public class BubbleSort {
       }
       iterater += 1;
     }
-
-    System.out.print("\nafter: ");
-    for (int i = 0; i < list_1.size(); i++) {
-      System.out.print(list_1.get(i) + " ");
-    }
-
+    return list_1;
   }
-
 }
