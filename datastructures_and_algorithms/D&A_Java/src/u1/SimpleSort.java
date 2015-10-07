@@ -3,11 +3,12 @@ package u1;
 import java.util.ArrayList;
 
 /**
- * This is the method whitch a human would use to sort numbers. 
- * We will start with looking for the smalles number and then switching it to 
+ * This is the method which a human would use to sort numbers. 
+ * We will start with looking for the smallest number and then switching it to 
  * the front of our ArrayList!
  * 
- * @author Kasper
+ * @date 10/07/2015
+ * @author Georg Kasper
  *
  */
 public class SimpleSort {
