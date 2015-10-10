@@ -1,0 +1,60 @@
+>> starting benchmark tests [0] with n=5000
+BubbleSort(G) using ArrayList size 5000 total execution time: 210ms ~0s
+BubbleSort(J) using ArrayList size 5000 total execution time: 229ms ~0s
+SimpleSort(G) using ArrayList size 5000 total execution time: 37ms ~0s
+SimpleSort(J) using ArrayList size 5000 total execution time: 231ms ~0s
+>> done!
+>> starting benchmark tests [1] with n=10000
+BubbleSort(G) using ArrayList size 10000 total execution time: 718ms ~0s
+BubbleSort(J) using ArrayList size 10000 total execution time: 791ms ~0s
+SimpleSort(G) using ArrayList size 10000 total execution time: 87ms ~0s
+SimpleSort(J) using ArrayList size 10000 total execution time: 974ms ~0s
+>> done!
+>> starting benchmark tests [2] with n=15000
+BubbleSort(G) using ArrayList size 15000 total execution time: 1680ms ~1s
+BubbleSort(J) using ArrayList size 15000 total execution time: 1500ms ~1s
+SimpleSort(G) using ArrayList size 15000 total execution time: 155ms ~0s
+SimpleSort(J) using ArrayList size 15000 total execution time: 1789ms ~1s
+>> done!
+>> starting benchmark tests [3] with n=20000
+BubbleSort(G) using ArrayList size 20000 total execution time: 2669ms ~2s
+BubbleSort(J) using ArrayList size 20000 total execution time: 2664ms ~2s
+SimpleSort(G) using ArrayList size 20000 total execution time: 326ms ~0s
+SimpleSort(J) using ArrayList size 20000 total execution time: 3178ms ~3s
+>> done!
+>> starting benchmark tests [4] with n=25000
+BubbleSort(G) using ArrayList size 25000 total execution time: 4172ms ~4s
+BubbleSort(J) using ArrayList size 25000 total execution time: 4146ms ~4s
+SimpleSort(G) using ArrayList size 25000 total execution time: 523ms ~0s
+SimpleSort(J) using ArrayList size 25000 total execution time: 4988ms ~4s
+>> done!
+>> starting benchmark tests [5] with n=30000
+BubbleSort(G) using ArrayList size 30000 total execution time: 6110ms ~6s
+BubbleSort(J) using ArrayList size 30000 total execution time: 6051ms ~6s
+SimpleSort(G) using ArrayList size 30000 total execution time: 747ms ~0s
+SimpleSort(J) using ArrayList size 30000 total execution time: 7154ms ~7s
+>> done!
+>> starting benchmark tests [6] with n=35000
+BubbleSort(G) using ArrayList size 35000 total execution time: 8167ms ~8s
+BubbleSort(J) using ArrayList size 35000 total execution time: 8104ms ~8s
+SimpleSort(G) using ArrayList size 35000 total execution time: 1183ms ~1s
+SimpleSort(J) using ArrayList size 35000 total execution time: 9855ms ~9s
+>> done!
+>> starting benchmark tests [7] with n=40000
+BubbleSort(G) using ArrayList size 40000 total execution time: 10756ms ~10s
+BubbleSort(J) using ArrayList size 40000 total execution time: 10662ms ~10s
+SimpleSort(G) using ArrayList size 40000 total execution time: 1267ms ~1s
+SimpleSort(J) using ArrayList size 40000 total execution time: 12740ms ~12s
+>> done!
+>> starting benchmark tests [8] with n=45000
+BubbleSort(G) using ArrayList size 45000 total execution time: 13685ms ~13s
+BubbleSort(J) using ArrayList size 45000 total execution time: 13694ms ~13s
+SimpleSort(G) using ArrayList size 45000 total execution time: 1575ms ~1s
+SimpleSort(J) using ArrayList size 45000 total execution time: 16192ms ~16s
+>> done!
+>> starting benchmark tests [9] with n=50000
+BubbleSort(G) using ArrayList size 50000 total execution time: 16915ms ~16s
+BubbleSort(J) using ArrayList size 50000 total execution time: 16997ms ~16s
+SimpleSort(G) using ArrayList size 50000 total execution time: 2009ms ~2s
+SimpleSort(J) using ArrayList size 50000 total execution time: 19866ms ~19s
+>> done!
