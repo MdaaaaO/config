@@ -50,55 +50,34 @@ public class Sorting {
     System.out.println("list size: " + list_1.size());
     return list_1;
   }
-
+  
   public static void main(String[] args) {
     
     int n = 10000; // unique numbers to generate
     
-    // Fill ArrayList
+    // Create random ArrayList
     ArrayList<Integer> random_list = geneareRandomIntegerArrayList(n);
-    ArrayList<Integer> random_list_sorted = new ArrayList<Integer>();
-    for (int i = 0; i < n; i++) {
-      random_list_sorted.add(i);
-    }
-//    System.out.println("unsorted: " + random_list.toString());
-//    System.out.println("sorted: " + random_list_sorted.toString());
-    
-    // BubbleSort unsorted array list
-    System.out.print("(unsorted) BubbleSort, ");
+    ArrayList<Integer> random_list_2 = geneareRandomIntegerArrayList(n);
+
+    // BubbleSort by Georg
     BubbleSort bub = new BubbleSort();
-    long startTime = System.currentTimeMillis();
     @SuppressWarnings("unused")
     ArrayList<Integer> sorted_list_1 = bub.sort(random_list);
-    long endTime = System.currentTimeMillis();
-//    System.out.println("\n" + sorted_list_1.toString());
-    System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
-
-    // BubbleSort sorted array list
-    System.out.print("(sorted) BubbleSort, ");
-    startTime = System.currentTimeMillis();
+ 
+    // BubbleSort by Julian
+    BubbleSortTwo bub_two = new BubbleSortTwo();
     @SuppressWarnings("unused")
-    ArrayList<Integer> sorted_list_3 = bub.sort(random_list_sorted);
-    endTime = System.currentTimeMillis();
-    System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
-
-    // SimpleSort unsorted array list
-    System.out.print("(unsorted) SimpleSort, ");
-    SimpleSort simpleSort = new SimpleSort();
-    startTime = System.currentTimeMillis();
-    @SuppressWarnings("unused")
-    ArrayList<Integer> sorted_list_2 = simpleSort.sort(random_list);
-    endTime = System.currentTimeMillis();
-//    System.out.println("\n" + sorted_list_2.toString());
-    System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
+    ArrayList<Integer> sorted_list_2 = bub_two.sort(random_list_2);
     
-    // SimpleSort sorted array list
-    System.out.print("(sorted) SimpleSort, ");
-    startTime = System.currentTimeMillis();
+    // SimpleSort by Georg
+    SimpleSort simpleSort = new SimpleSort();
     @SuppressWarnings("unused")
-    ArrayList<Integer> sorted_list_4 = simpleSort.sort(random_list);
-    endTime = System.currentTimeMillis();
-    System.out.println("Total execution time: " + (endTime-startTime) + "ms"); 
+    ArrayList<Integer> sorted_list_3 = simpleSort.sort(random_list);
+    
+    // SimpleSortTwo by Julian
+    SimpleSortTwo simpleSortTwo = new SimpleSortTwo();
+    @SuppressWarnings("unused")
+    ArrayList<Integer> sorted_list_4 = simpleSortTwo.sort(random_list);
     
   }
 }

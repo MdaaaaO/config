@@ -16,10 +16,14 @@ public class SimpleSort {
   public ArrayList<Integer> sort(ArrayList<Integer> integer_list) {
     int minNumber;
     int indexMinNumber = 0;
+    int size = integer_list.size();
+	System.out.print("SimpleSort(G) using ArrayList size " + size );
+	
+	long startTime = System.currentTimeMillis();
 
-    for (int n = 0; n < integer_list.size(); n++) {
+    for (int n = 0; n < size; n++) {
       minNumber = integer_list.get(n);
-      for (int i = n; i < integer_list.size(); i++) {
+      for (int i = n; i < size; i++) {
         if (minNumber > integer_list.get(i)) {
           minNumber = integer_list.get(i);
           indexMinNumber = i;
@@ -32,6 +36,8 @@ public class SimpleSort {
       integer_list.set(n, minNumber);
       integer_list.set(indexMinNumber, tmp_swap_high);
     }
+    long endTime = System.currentTimeMillis();
+	System.out.println(" total execution time: " + (endTime - startTime) + "ms");
     return integer_list;
   }
 }
