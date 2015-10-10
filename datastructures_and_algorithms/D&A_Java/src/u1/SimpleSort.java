@@ -1,6 +1,7 @@
 package u1;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This is the method which a human would use to sort numbers. 
@@ -37,7 +38,8 @@ public class SimpleSort {
       integer_list.set(indexMinNumber, tmp_swap_high);
     }
     long endTime = System.currentTimeMillis();
-	System.out.println(" total execution time: " + (endTime - startTime) + "ms");
-    return integer_list;
+	System.out.print(" total execution time: " + (endTime - startTime) + "ms");
+	System.out.println(" ~" + TimeUnit.MILLISECONDS.toSeconds(endTime - startTime)+ "s");
+	return integer_list;
   }
 }

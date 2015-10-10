@@ -1,6 +1,7 @@
 package u1;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This is the well known bubble sort algorithm, extended with an iterator count
@@ -45,7 +46,8 @@ public class BubbleSort {
 		}
 
 		long endTime = System.currentTimeMillis();
-		System.out.println(" total execution time: " + (endTime - startTime) + "ms");
+		System.out.print(" total execution time: " + (endTime - startTime) + "ms");
+		System.out.println(" ~" + TimeUnit.MILLISECONDS.toSeconds(endTime - startTime)+ "s");
 		return integer_list;
 	}
 }

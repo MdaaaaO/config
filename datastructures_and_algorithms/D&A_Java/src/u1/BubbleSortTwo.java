@@ -1,6 +1,7 @@
 package u1;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 
@@ -36,7 +37,8 @@ public class BubbleSortTwo {
 			}
 		}
 		long endTime = System.currentTimeMillis();
-		System.out.println(" total execution time: " + (endTime - startTime) + "ms");
+		System.out.print(" total execution time: " + (endTime - startTime) + "ms");
+		System.out.println(" ~" + TimeUnit.MILLISECONDS.toSeconds(endTime - startTime)+ "s");
 		return integer_list;
 	}
 }
