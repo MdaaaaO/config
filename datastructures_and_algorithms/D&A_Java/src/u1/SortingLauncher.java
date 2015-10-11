@@ -15,7 +15,7 @@ import java.util.Random;
  * @author Georg Kasper
  *
  */
-public class Sorting {
+public class SortingLauncher {
 
 	/**
 	 * This method will generate a random number within the range. Be careful,
@@ -49,13 +49,35 @@ public class Sorting {
 		return list_1;
 	}
 
+	public static void amIsorted(ArrayList<Integer> random_list) {
+		boolean sorted = true;
+		for (int i = 0; i < random_list.size() - 1; i++) {
+			if (random_list.get(i) > random_list.get(i + 1)) {
+				sorted = false;
+			}
+		}
+		if (!sorted) {
+			System.out.println("You are not sorted! ;-(");
+			System.out.println(random_list.toString());
+		}
+	}
+
+	/**
+	 * This Method will start the implemented algorithms and increase the sample
+	 * size every iteration, pay attention that we create a new random list for
+	 * every new algorithm, to avoid JVM build-in optimizations after reading
+	 * one ArrayList.
+	 * 
+	 * @param iterations
+	 */
 	public static void benchmark(int iterations) {
 
-		int n = 5000;
+		int n = 100000;
 		for (int i = 0; i < iterations; i++) {
+
 			// sample size
-			System.out.println(">> starting benchmark tests [" + i + "] with "
-					+ "n=" + n);
+			System.out.println(">> starting benchmark tests [" + i + "] with " + "n=" + n);
+
 			// Create random ArrayList
 			ArrayList<Integer> random_list = geneareRandomIntegerArrayList(n);
 			ArrayList<Integer> random_list_2 = geneareRandomIntegerArrayList(n);
@@ -64,25 +86,26 @@ public class Sorting {
 
 			// BubbleSort by Georg
 			BubbleSort bub = new BubbleSort();
-			@SuppressWarnings("unused")
 			ArrayList<Integer> sorted_list_1 = bub.sort(random_list);
+			amIsorted(sorted_list_1);
 
 			// BubbleSort by Julian
 			BubbleSortTwo bub_two = new BubbleSortTwo();
-			@SuppressWarnings("unused")
 			ArrayList<Integer> sorted_list_2 = bub_two.sort(random_list_2);
+			amIsorted(sorted_list_2);
 
 			// SimpleSort by Georg
 			SimpleSort simpleSort = new SimpleSort();
-			@SuppressWarnings("unused")
 			ArrayList<Integer> sorted_list_3 = simpleSort.sort(random_list_3);
+			amIsorted(sorted_list_3);
 
 			// SimpleSortTwo by Julian
 			SimpleSortTwo simpleSortTwo = new SimpleSortTwo();
-			@SuppressWarnings("unused")
 			ArrayList<Integer> sorted_list_4 = simpleSortTwo.sort(random_list_4);
+			amIsorted(sorted_list_4);
+
 			System.out.println(">> done!");
-			n+=5000;
+			n += 100000;
 		}
 
 	}
