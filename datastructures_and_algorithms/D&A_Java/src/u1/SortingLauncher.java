@@ -79,38 +79,43 @@ public class SortingLauncher {
 			System.out.println(">> starting benchmark tests [" + i + "] with " + "n=" + n);
 
 			// Create random ArrayList
-			ArrayList<Integer> random_list = geneareRandomIntegerArrayList(n);
-			ArrayList<Integer> random_list_2 = geneareRandomIntegerArrayList(n);
-			ArrayList<Integer> random_list_3 = geneareRandomIntegerArrayList(n);
-			ArrayList<Integer> random_list_4 = geneareRandomIntegerArrayList(n);
+//			ArrayList<Integer> random_list_2 = geneareRandomIntegerArrayList(n);
+//			ArrayList<Integer> random_list_4 = geneareRandomIntegerArrayList(n);
 
 			// BubbleSort by Georg
-			BubbleSort bub = new BubbleSort();
-			ArrayList<Integer> sorted_list_1 = bub.sort(random_list);
-			amIsorted(sorted_list_1);
+//			for (int j = 0; j < 2; j++) {
+//				ArrayList<Integer> random_list = geneareRandomIntegerArrayList(n);
+//				BubbleSort bub = new BubbleSort();
+//				ArrayList<Integer> sorted_list_1 = bub.sort(random_list);
+//				amIsorted(sorted_list_1);
+//			}
+			
 
 			// BubbleSort by Julian
-			BubbleSortTwo bub_two = new BubbleSortTwo();
-			ArrayList<Integer> sorted_list_2 = bub_two.sort(random_list_2);
-			amIsorted(sorted_list_2);
+//			BubbleSortTwo bub_two = new BubbleSortTwo();
+//			ArrayList<Integer> sorted_list_2 = bub_two.sort(random_list_2);
+//			amIsorted(sorted_list_2);
 
 			// SimpleSort by Georg
-			SimpleSort simpleSort = new SimpleSort();
-			ArrayList<Integer> sorted_list_3 = simpleSort.sort(random_list_3);
-			amIsorted(sorted_list_3);
+			for (int j = 0; j < 6; j++) {
+				ArrayList<Integer> random_list_3 = geneareRandomIntegerArrayList(n);
+				SimpleSort simpleSort = new SimpleSort();
+				ArrayList<Integer> sorted_list_3 = simpleSort.sort(random_list_3);
+				amIsorted(sorted_list_3);
+			}
 
 			// SimpleSortTwo by Julian
-			SimpleSortTwo simpleSortTwo = new SimpleSortTwo();
-			ArrayList<Integer> sorted_list_4 = simpleSortTwo.sort(random_list_4);
-			amIsorted(sorted_list_4);
+//			SimpleSortTwo simpleSortTwo = new SimpleSortTwo();
+//			ArrayList<Integer> sorted_list_4 = simpleSortTwo.sort(random_list_4);
+//			amIsorted(sorted_list_4);
 
 			System.out.println(">> done!");
-			n += 100000;
+			n += 10000;
 		}
 
 	}
 
 	public static void main(String[] args) {
-		benchmark(10);
+		benchmark(1);
 	}
 }
