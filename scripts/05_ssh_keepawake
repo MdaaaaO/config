@@ -1,0 +1,9 @@
+#!/bin/sh
+# Prevent from sleep if SSH session(s) are open.
+# source: http://askubuntu.com/questions/521620/prevent-machine-from-sleeping-when-ssh-connections-are-on
+# direction: /etc/pm/sleep.d/
+
+if [ `who | grep -cv "(:"` -gt 0 ]; then
+        echo "SSH session(s) are on. Not suspending."
+        exit 1;
+fi
