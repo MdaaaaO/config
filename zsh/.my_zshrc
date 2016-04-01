@@ -1,0 +1,23 @@
+###############################################################################
+# Personal tmux.conf
+# date 03/09/2016
+#
+
+###############################################################################
+# tmux: attach or create session if needed
+#
+
+TMUX_SESSION=$USER
+tmux -2 new-session -A -s $TMUX_SESSION  > /dev/null 2>&1
+
+export TERM="xterm-256color"
+export PATH=$PATH:$HOME/.local/bin
+
+###############################################################################
+# JAVA and JUNIT
+#
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre
+export JUNIT_HOME=/usr/share/java
+export CLASSPATH=$CLASSPATH:$JUNIT_HOME/junit4-4.12.jar
+
