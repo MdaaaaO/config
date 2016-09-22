@@ -1,4 +1,5 @@
 #!/bin/bash
+# use: sudo bash install.sh
 
 # colors
 RED='\033[33;31m'
@@ -15,11 +16,9 @@ install_link_deb_bin() {
     echo -e "| --- $3 ${YELLOW}already installed!${DEFAULT}"
   else
     echo -e "| --- Downloading and Installing $2"
-    cd Downloads
     wget "$1"
     dpkg -i "$2"
     rm "$2"
-    cd
   fi
 }
 
