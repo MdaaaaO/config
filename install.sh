@@ -66,6 +66,7 @@ install_atom() {
   atom_app="atom-amd64.deb"
   atom_bin="atom"
   install_link_deb_bin $atom_link $atom_app $atom_bin
+  install_atom_packages
 }
 
 install_chrome() {
@@ -103,11 +104,14 @@ install_apps() {
   install_apt_get "gimp" # photo editor
   install_apt_get "gpodder" # podcast
   install_apt_get "shutter" # screen sniping tool
+  install_apt_get "meld" # file / folder diff comparison
 }
 
 install_atom_packages() {
   install_atom_apm "linter"
   install_atom_apm "linter-shellcheck"
+  install_atom_apm "linter-clang"
+  install_atom_apm "autocomplete-clang"
   install_atom_apm "language-csharp"
   install_atom_apm "highlight-selected"
   install_atom_apm "jsonlint"
@@ -123,8 +127,21 @@ install_csharp() {
   install_apt_get "ca-certificates-mono"
   install_apt_get "mono-xsp4"
   install_apt_get "gtk2.0"
+  # formatter
+  install_apt_get "uncrustify"
 }
 
+install_cpp() {
+  # TODO: clang-format requires a cfg
+  # formatter
+  install_apt_get "clang" # required for linter and autocomplete
+  install_apt_get "clang-format" # formatter
+}
+
+install_latex() {
+  # TODO: install it :-)
+  echo ""
+}
 
 ################################################################################
 # install.sh
@@ -141,8 +158,8 @@ main() {
   install_apps
   install_chrome
   install_atom
-  install_atom_packages
   install_csharp
+  install_cpp
   clean
 }
 
