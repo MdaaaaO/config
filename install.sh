@@ -138,6 +138,12 @@ install_cpp() {
   install_apt_get "clang-format" # formatter
 }
 
+install_java() {
+  install_apt_get "ant"
+  install_apt_get "default-jdk"
+
+}
+
 install_latex() {
   # TODO: install it :-)
   echo ""
