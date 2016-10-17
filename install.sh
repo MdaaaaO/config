@@ -15,9 +15,9 @@ install_link_deb_bin() {
   if command -v "$3" >/dev/null 2>&1; then
     echo -e "| --- $3 ${YELLOW}already installed!${DEFAULT}"
   else
-    echo -e "| --- Downloading and Installing $2"
-    wget "$1"
-    dpkg -i "$2"
+    echo -e "| --- $2 downloading and installing."
+    wget $1 -O $2 -q --show-progress
+    dpkg -i "$2" > /dev/null 2>&1
     rm "$2"
   fi
 }
@@ -62,7 +62,7 @@ clean() {
 # install
 #
 install_atom() {
-  atom_link="https://atom.io/download/atom-amd64.deb"
+  atom_link="https://atom.io/download/deb"
   atom_app="atom-amd64.deb"
   atom_bin="atom"
   install_link_deb_bin $atom_link $atom_app $atom_bin
