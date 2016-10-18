@@ -66,6 +66,7 @@ install_atom() {
   atom_app="atom-amd64.deb"
   atom_bin="atom"
   install_link_deb_bin $atom_link $atom_app $atom_bin
+  chown -R "$(whoami)" ~/.atom
   install_atom_packages
 }
 
@@ -94,6 +95,7 @@ install_apps() {
 
   # nodejs
   install_apt_get "nodejs" # programming language
+  install_apt_get "nodejs-legacy" # allows the use of node
   install_apt_get "npm" # node packages
 
   # python
@@ -119,6 +121,11 @@ install_atom_packages() {
   install_atom_apm "file-icons"
 }
 
+install_npm_packages() {
+  echo "| -- [npm] wic"
+  npm install -g express-generator
+}
+
 install_csharp() {
   # INSTRUCTIONS: http://www.mono-project.com/docs/getting-started/install/linux/#usage
   # TEST: http://www.mono-project.com/docs/getting-started/mono-basics/
@@ -141,12 +148,11 @@ install_cpp() {
 install_java() {
   install_apt_get "ant"
   install_apt_get "default-jdk"
-
 }
 
 install_latex() {
   # TODO: install it :-)
-  echo ""
+  echo "| -- [latex] wic"
 }
 
 ################################################################################
@@ -166,6 +172,8 @@ main() {
   install_atom
   install_csharp
   install_cpp
+  install_latex
+  install_npm_packages
   clean
 }
 
